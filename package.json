@@ -1,0 +1,31 @@
+{
+  "name": "desafio-02",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "[] - Deve ser possível criar um usuário",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tsx src/server.ts",
+    "knex": "node --import tsx ./node_modules/knex/bin/cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "fastify-zod": "^1.4.0",
+    "sqlite3": "^5.1.7",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/jwt": "^8.0.1",
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/bcrypt": "^5.0.2",
+    "bcrypt": "^5.1.1",
+    "fastify": "^4.28.1",
+    "knex": "^3.1.0",
+    "zod": "^3.23.8"
+  }
+}
