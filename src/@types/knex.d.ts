@@ -10,7 +10,18 @@ declare module "knex/types/tables" {
     created_at: string;
   }
 
+  interface Meal {
+    id: string;
+    name: string;
+    description: string;
+    date_and_time: string;
+    on_diet: "yes" | "no";
+    user_id: string;
+    created_at: string;
+  }
+
   interface Tables {
     users: User;
+    meals: Meal;
   }
 }

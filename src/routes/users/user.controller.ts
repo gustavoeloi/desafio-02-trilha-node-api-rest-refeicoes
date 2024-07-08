@@ -73,3 +73,9 @@ export async function getUsers(req: FastifyRequest, reply: FastifyReply) {
 
   return reply.code(200).send(users);
 }
+
+export async function logout(req: FastifyRequest, reply: FastifyReply) {
+  reply.clearCookie("access_token");
+
+  return reply.send({ message: "Logout successful" });
+}

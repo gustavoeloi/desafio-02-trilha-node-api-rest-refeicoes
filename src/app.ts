@@ -3,6 +3,8 @@ import cookie from "@fastify/cookie";
 import { userRoutes } from "./routes/users/user.routes";
 import { userSchemas } from "./routes/users/user.schema";
 import jwt, { FastifyJWT } from "@fastify/jwt";
+import { mealsSchema } from "./routes/meals/meals.schema";
+import { mealsRoutes } from "./routes/meals/meals.routes";
 
 export const app = fastify();
 
@@ -38,6 +40,14 @@ for (const schema of [...userSchemas]) {
   app.addSchema(schema);
 }
 
+for (const schema of [...mealsSchema]) {
+  app.addSchema(schema);
+}
+
 app.register(userRoutes, {
   prefix: "/users",
+});
+
+app.register(mealsRoutes, {
+  prefix: "/meals",
 });
